@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kontak dan Pendaftaran SMA Harapan Bangsa">
+  <title>Kontak - SMA Harapan Bangsa</title>
+  <link rel="icon" type="image/png" href="assets/images/logo1.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/images/logo1.png" alt="Logo SMA Harapan Bangsa">
+      <span>SMA Harapan Bangsa</span>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html">Profil</a></li>
+        <li><a href="program.html">Program Studi</a></li>
+        <li><a href="galeri.html">Galeri</a></li>
+        <li><a href="kontak.html" class="active">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div class="content">
+        <h1>Hubungi Kami</h1>
+        <p>Kami siap membantu Anda dengan informasi lengkap tentang SMA Harapan Bangsa</p>
+      </div>
+    </section>
+
+    <section class="content">
+      <div class="contact-layout">
+        <div class="contact-left">
+          <h2>Informasi Kontak</h2>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-icon">📍</div>
+              <div class="contact-details">
+                <h4>Alamat</h4>
+                <p>Jl. Pendidikan No. 123<br>Kota Harapan, Indonesia 12345</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon">📞</div>
+              <div class="contact-details">
+                <h4>Telepon</h4>
+                <p>(021) 1234-5678<br>(021) 1234-5679</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon">✉️</div>
+              <div class="contact-details">
+                <h4>Email</h4>
+                <p>info@smaharapanbangsa.sch.id<br>admin@smaharapanbangsa.sch.id</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon">🕰️</div>
+              <div class="contact-details">
+                <h4>Jam Operasional</h4>
+                <p>Senin - Jumat: 07:00 - 16:00 WIB<br>Sabtu: 07:00 - 12:00 WIB<br>Minggu: Tutup</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-right">
+          <div class="form-container">
+            <h2>Kirim Komentar</h2>
+            <p class="form-description">Berikan komentar atau saran Anda untuk SMA Harapan Bangsa</p>
+            <form id="formKomentar" class="contact-form">
+              <div class="form-row">
+                <input type="text" id="nama" placeholder="Nama Lengkap" required>
+                <input type="email" id="email" placeholder="Email" required>
+              </div>
+              <input type="text" id="subjek" placeholder="Subjek" required>
+              <textarea id="komentar" placeholder="Tulis komentar atau saran Anda..." rows="6" required></textarea>
+              <button type="submit" class="submit-btn">Kirim Komentar</button>
+              <p id="pesan"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section">
+      <div class="content">
+        <h2>Lokasi Sekolah</h2>
+        <div class="map-container">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.521260322283!2d106.8195613!3d-6.2087634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5390917b759%3A0x6b45e67356080477!2sMonas!5e0!3m2!1sen!2sid!4v1635724123456!5m2!1sen!2sid" 
+            width="100%" 
+            height="400" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 SMA Harapan Bangsa | All Rights Reserved</p>
+    <p class="footer-credit">Website dikembangkan oleh Tim Kelompok - Proyek Akhir PWEB</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
