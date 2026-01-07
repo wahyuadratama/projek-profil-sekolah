@@ -31,10 +31,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const updateCounter = () => {
       if (current < target) {
         current += increment;
-        counter.textContent = Math.ceil(current);
+        if (target <= 100) {
+          counter.textContent = Math.ceil(current) + (target === 95 ? '%' : '+');
+        } else {
+          counter.textContent = Math.ceil(current) + '+';
+        }
         setTimeout(updateCounter, 20);
       } else {
-        counter.textContent = target;
+        counter.textContent = target + (target === 95 ? '%' : '+');
       }
     };
 
@@ -149,20 +153,10 @@ document.addEventListener("DOMContentLoaded", function () {
     formKomentar.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      const nama = document.getElementById("nama").value.trim();
-      const email = document.getElementById("email").value.trim();
-      const subjek = document.getElementById("subjek").value.trim();
       const komentar = document.getElementById("komentar").value.trim();
 
-      if (!nama || !email || !subjek || !komentar) {
-        pesan.textContent = "⚠️ Semua field wajib diisi!";
-        pesan.style.color = "red";
-        return;
-      }
-
-      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-      if (!emailPattern.test(email)) {
-        pesan.textContent = "⚠️ Format email tidak valid!";
+      if (!komentar) {
+        pesan.textContent = "⚠️ Komentar wajib diisi!";
         pesan.style.color = "red";
         return;
       }
